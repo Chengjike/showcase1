@@ -28,4 +28,5 @@ Thumbs.db
 
 # Temporary files
 *.tmp
-*.tempshowcase2/
+*.temp
+showcase2/
