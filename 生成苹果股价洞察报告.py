@@ -169,8 +169,8 @@ html = f'''<!DOCTYPE html>
 
         body {{
             font-family: 'Helvetica', 'Arial', 'Microsoft YaHei', sans-serif;
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-            color: #1e293b;
+            background: #ffffff;
+            color: #1a1a1a;
             line-height: 1.6;
             padding: 20px;
             min-height: 100vh;
@@ -187,9 +187,9 @@ html = f'''<!DOCTYPE html>
             margin-bottom: 30px;
             padding: 30px;
             background: white;
-            border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-            border-bottom: 4px solid #3b82f6;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border-bottom: 4px solid #0047BB;
         }}
 
         .header h1 {{
@@ -206,12 +206,13 @@ html = f'''<!DOCTYPE html>
         }}
 
         .header .date-range {{
-            background: #f1f5f9;
+            background: #f8f9fa;
             padding: 10px 20px;
-            border-radius: 10px;
+            border-radius: 8px;
             display: inline-block;
             font-weight: 500;
-            color: #475569;
+            color: #666666;
+            border: 1px solid #e9ecef;
         }}
 
         /* 卡片样式 */
@@ -224,16 +225,18 @@ html = f'''<!DOCTYPE html>
 
         .card {{
             background: white;
-            border-radius: 14px;
+            border-radius: 10px;
             padding: 24px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-top: 4px solid #3b82f6;
+            border-top: 4px solid #0047BB;
+            border: 1px solid #f0f0f0;
         }}
 
         .card:hover {{
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+            border-color: #0047BB;
         }}
 
         .card-title {{
@@ -269,18 +272,19 @@ html = f'''<!DOCTYPE html>
         /* 图表容器 */
         .chart-container {{
             background: white;
-            border-radius: 14px;
+            border-radius: 10px;
             padding: 25px;
             margin-bottom: 30px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+            border: 1px solid #f0f0f0;
         }}
 
         .chart-title {{
-            color: #1e293b;
+            color: #1a1a1a;
             margin-bottom: 20px;
             font-size: 1.4rem;
             font-weight: 600;
-            border-left: 4px solid #3b82f6;
+            border-left: 4px solid #0047BB;
             padding-left: 15px;
         }}
 
@@ -292,10 +296,11 @@ html = f'''<!DOCTYPE html>
         /* 分析区域 */
         .analysis-section {{
             background: white;
-            border-radius: 14px;
+            border-radius: 10px;
             padding: 30px;
             margin-bottom: 30px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+            border: 1px solid #f0f0f0;
         }}
 
         .section-title {{
@@ -312,7 +317,7 @@ html = f'''<!DOCTYPE html>
             content: '';
             width: 6px;
             height: 24px;
-            background: #3b82f6;
+            background: #0047BB;
             border-radius: 3px;
         }}
 
@@ -345,7 +350,7 @@ html = f'''<!DOCTYPE html>
         }}
 
         .data-table th {{
-            background: #3b82f6;
+            background: #0047BB;
             color: white;
             padding: 15px;
             text-align: left;
@@ -367,12 +372,12 @@ html = f'''<!DOCTYPE html>
 
         /* 总结区域 */
         .summary-section {{
-            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
-            border-radius: 14px;
+            background: linear-gradient(135deg, #0047BB 0%, #003399 100%);
+            border-radius: 12px;
             padding: 35px;
             margin-bottom: 30px;
             color: white;
-            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+            box-shadow: 0 5px 20px rgba(0, 71, 187, 0.15);
         }}
 
         .summary-title {{
@@ -762,7 +767,7 @@ html += f'''
             type: 'scatter',
             mode: 'lines',
             name: 'MA5 (5日移动平均)',
-            line: {{ color: '#3b82f6', width: 2 }},
+            line: {{ color: '#0047BB', width: 2 }},
             yaxis: 'y'
         }};
 
@@ -832,9 +837,9 @@ html += f'''
             name: '收盘价分布',
             nbinsx: 20,
             marker: {{
-                color: '#3b82f6',
+                color: '#0047BB',
                 line: {{
-                    color: '#1d4ed8',
+                    color: '#003399',
                     width: 1
                 }}
             }},
